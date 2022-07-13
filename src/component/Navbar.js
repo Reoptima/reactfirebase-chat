@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {AppBar, Button, Grid, Toolbar} from "@mui/material";
+import {AppBar, Button, CssBaseline, Grid, Toolbar} from "@mui/material";
 import {NavLink} from "react-router-dom";
 import {LOGIN_ROUTE} from "../utils/consts";
 import {Context} from "../index";
@@ -9,7 +9,8 @@ const Navbar = () => {
     const {auth} = useContext(Context)
     const [user] = useAuthState(auth)
     return (
-        <AppBar color={"secondary"} position="static">
+        <AppBar color={"secondary"} w position="static">
+            <CssBaseline/>
             <Toolbar variant={"dense"}>
                 <Grid container justifyContent="flex-end">
                     {user ?
